@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
+import Navbar from './components/header';
 import FileCompressor from './components/fileCompress';  // Import komponen kompresi file
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+      <Navbar />
+      <div className="row">
+      <div className="col-md-6">
         <FileCompressor />
-      </header>
+        </div>
+        </div>
     </div>
   );
 }
