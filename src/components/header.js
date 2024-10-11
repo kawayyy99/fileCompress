@@ -1,11 +1,12 @@
 import React from 'react';
+import LogoNavbar from "../assets/img/logo/kaway.png";
 
 function Navbar() {
   return (
-    <div className="container-fluid p-0">
-    <nav className="navbar navbar-expand-lg bg-light">
+    <div className="header-menu container-fluid p-0">
+    <nav className="navbar navbar-expand-lg bg-white">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Why Converter</a>
+        <a className="navbar-brand" href="#"><img className="logo" src={LogoNavbar} /></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

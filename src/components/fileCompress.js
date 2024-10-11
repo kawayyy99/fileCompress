@@ -35,12 +35,12 @@ function FileCompressor() {
   };
 
   return (
-    <div className="container-fluid bg-light">
+    <div className="container-fluid bg-light p-5">
       <h1>File Compression</h1>
       <div class="input-group mb-3">
-  <label class="input-group-text" for="inputGroupFile01">Upload</label>
+  <label class="input-group-text btn-outline-primary" for="inputGroupFile01">Upload</label>
   <input type="file" class="form-control" id="inputGroupFile01" accept="image/*"  onChange={handleFileChange} />
-  <button class="btn btn-outline-secondary" onClick={handleCompress}>Compress File</button>
+  <button class="btn btn-primary" onClick={handleCompress}>Compress File</button>
 </div>    
 
       {selectedFile && (
@@ -52,7 +52,7 @@ function FileCompressor() {
       {compressedFile && (
         <div>
           <p>Compressed File Size: {compressedSize} KB</p>
-          <a href={URL.createObjectURL(compressedFile)} download={compressedFile.name}>
+          <a className="btn btn-primary" href={URL.createObjectURL(compressedFile)} download={compressedFile.name}>
             Download Compressed File
           </a>
         </div>
