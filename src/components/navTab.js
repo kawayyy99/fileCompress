@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FileCompressor from './fileCompress'; 
 import FileConverter from './fileConverter';
+import FileLinkConverter from './fileLinkDownload';
 
 const NavPills = () => {
   // State to manage the active tab
@@ -46,7 +47,11 @@ const NavPills = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">
+          <a 
+              className={`nav-link ${activeTab === 'disabled' ? 'active' : ''}`} 
+              onClick={() => handleTabChange('disabled')} 
+              href="#"
+              >
               Disabled
             </a>
           </li>
@@ -59,7 +64,7 @@ const NavPills = () => {
           <div className="col-md-12 bg-light">
             {activeTab === 'compression' && <FileCompressor />}
             {activeTab === 'converter' && <FileConverter />}
-            {activeTab === 'downloader' && <p>Link Converter Downloader content will go here</p>}
+            {activeTab === 'downloader' && <FileLinkConverter/>}
           </div>
         </div>
       </div>
